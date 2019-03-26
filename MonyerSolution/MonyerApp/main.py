@@ -33,6 +33,7 @@ class Dialog(QtWidgets.QDialog, dialogDesign.Ui_Dialog):
                                   self.expenseRadioButton.isChecked(),
                                   self.dateTimeEdit.dateTime().toString(self.dateTimeEdit.displayFormat()))
         self.current_balance.add(transaction)
+        self.current_balance.save()
         self.close()
         
 
