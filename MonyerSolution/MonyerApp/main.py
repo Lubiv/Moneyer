@@ -54,7 +54,9 @@ class Dialog(QtWidgets.QDialog, dialogDesign.Ui_Dialog):
         self.setupUi(self)
         self.current_balance = current_balance
         self.buttonBox.accepted.connect(self.take_data)
+        self.buttonBox.accepted.connect(parent.refresh)
         self.buttonBox.rejected.connect(self.close)
+        self.buttonBox.rejected.connect(parent.refresh)
 
         
 
@@ -74,7 +76,7 @@ def main():
     app = QtWidgets.QApplication(sys.argv)
     mainWindow = Program(current_balance)
     mainWindow.show()
-    mainWindow.refresh();
+    mainWindow.refresh()
     app.exec_()
 
 if __name__ == '__main__':
