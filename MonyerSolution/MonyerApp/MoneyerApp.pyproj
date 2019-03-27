@@ -25,6 +25,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Balance.py" />
+    <Compile Include="beginningDesign.py" />
     <Compile Include="dialogDesign.py" />
     <Compile Include="main.py">
       <SubType>Code</SubType>
