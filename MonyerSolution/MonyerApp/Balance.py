@@ -7,7 +7,7 @@ class Balance:
         self.balance = pd.DataFrame({"title": "initial", "amount": [initial], "isExpense": "", "dateTime": ""})
 
     def save(self):
-        self.balance.to_csv('test.csv')
+        self.balance.to_csv('test.csv', index = False)
 
     def load(self, path):        
         self.balance = pd.read_csv(path)
